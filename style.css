@@ -4,6 +4,7 @@
     width: 60vw;
     height: 60vw;
     margin: auto;
+    /* transform-style: preserve-3d; */
 }
 
 .sandy{
@@ -15,6 +16,7 @@
     float: left;
     padding: 0;
     margin: auto;
+    transition: width 2s, height 2s, transform 2s;
 }
 
 .reverse{
@@ -38,4 +40,34 @@
     text-align: justify;
     font-size: 5vw;
     color: white;
+}
+
+.sandy:hover{
+    width: 12.5%;
+    height: 12.5%;
+    transform: rotate(360deg);
+}
+
+.trans{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sandy:hover .trans{
+visibility: visible;
+opacity: 1;
+color: black;
+}
+
+.reverse:hover {
+    width: 12.5%;
+    height: 12.5%;
+    transform: rotate(360deg);
+}
+
+
+.reverse:hover .trans {
+visibility: visible;
+opacity: 1;
+color: black;
 }
